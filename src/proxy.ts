@@ -8,6 +8,7 @@ const PUBLIC_ROUTES = [
   '/confirm-email',
   '/auth/callback/google',
   '/auth/callback/github',
+  '/auth/forgot-password',
   '/reset-password',
   '/explore',
   '/pricing',

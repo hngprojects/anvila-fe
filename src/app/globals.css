@@ -1,3 +1,4 @@
+@import "../../node_modules/swiper/swiper.css";
 @import 'swiper/css' layer(base);
 @import 'swiper/css/navigation' layer(base);
 @import 'swiper/css/pagination' layer(base);
