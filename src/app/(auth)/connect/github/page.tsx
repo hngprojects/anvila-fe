@@ -32,7 +32,6 @@ export default function ConnectGitHubPage() {
     <OAuthConnectScreen
       providerName="GitHub"
       providerIcon="/icons/github.svg"
-      providerIconBg={true}
       subtitle="Anvila needs access to create and manage repositories for AI agents"
       permissions={GITHUB_PERMISSIONS}
       onConnect={handleConnect}

@@ -32,7 +32,6 @@ export default function ConnectGooglePage() {
     <OAuthConnectScreen
       providerName="Google"
       providerIcon="/icons/google.svg"
-      providerIconBg={false}
       subtitle="Anvila is an AI software designed to build personalities and skills for technical and non-technical users."
       permissions={GOOGLE_PERMISSIONS}
       onConnect={handleConnect}
