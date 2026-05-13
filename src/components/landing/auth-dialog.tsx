@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { LucideGift } from 'lucide-react'
-import Link from 'next/link'
-import * as React from 'react'
+import { LucideGift } from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
 
 import {
   Dialog,
@@ -11,8 +11,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '../ui/dialog'
-import { Button } from '../ui/button'
+} from "../ui/dialog";
+import { Button } from "../ui/button";
 
 function GoogleLogo({ className }: { className?: string }) {
   return (
@@ -38,12 +38,12 @@ function GoogleLogo({ className }: { className?: string }) {
         fill="#EA4335"
       />
     </svg>
-  )
+  );
 }
 
 type AuthDialogProps = {
-  trigger: React.ReactNode
-}
+  trigger: React.ReactNode;
+};
 
 export function AuthDialog({ trigger }: AuthDialogProps) {
   return (
@@ -73,7 +73,7 @@ export function AuthDialog({ trigger }: AuthDialogProps) {
             </div>
             <span
               className="text-[10px] font-bold tracking-[0.2em] text-[#0D5C4E]"
-              style={{ fontFamily: 'Inter' }}
+              style={{ fontFamily: "Inter" }}
             >
               AGENTFORGE
             </span>
@@ -93,7 +93,7 @@ export function AuthDialog({ trigger }: AuthDialogProps) {
               variant="outline"
               className="group h-14 w-full gap-4 rounded-2xl border-[#E5E7EB] text-base font-semibold transition-all duration-200 hover:border-[#D1D5DB] hover:bg-[#F9FAFB]"
               onClick={() => {
-                window.location.href = '/api/auth/google'
+                window.location.href = "/api/auth/google";
               }}
             >
               <GoogleLogo className="h-6 w-6 transition-transform group-hover:scale-105" />
@@ -104,7 +104,7 @@ export function AuthDialog({ trigger }: AuthDialogProps) {
               variant="outline"
               className="group h-14 w-full gap-4 rounded-2xl border-[#E5E7EB] text-base font-semibold transition-all duration-200 hover:border-[#D1D5DB] hover:bg-[#F9FAFB]"
               onClick={() => {
-                window.location.href = '/api/auth/github'
+                window.location.href = "/api/auth/github";
               }}
             >
               <LucideGift className="h-6 w-6 transition-transform group-hover:scale-105" />
@@ -121,14 +121,14 @@ export function AuthDialog({ trigger }: AuthDialogProps) {
             </Link>
 
             <p className="max-w-[280px] text-[11px] leading-normal text-[#9CA3AF]">
-              By signing up, you agree to our{' '}
+              By signing up, you agree to our{" "}
               <Link
                 href="/terms"
                 className="underline underline-offset-2 transition-colors hover:text-[#6B7280]"
               >
                 Terms
-              </Link>{' '}
-              and{' '}
+              </Link>{" "}
+              and{" "}
               <Link
                 href="/privacy"
                 className="underline underline-offset-2 transition-colors hover:text-[#6B7280]"
@@ -141,5 +141,5 @@ export function AuthDialog({ trigger }: AuthDialogProps) {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

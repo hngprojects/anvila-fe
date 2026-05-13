@@ -1,77 +1,77 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { LucideBook, X, LucideLink, LucideStar } from 'lucide-react'
-import Image from 'next/image'
+import Link from "next/link";
+import { LucideBook, X, LucideLink, LucideStar } from "lucide-react";
+import Image from "next/image";
 
 const ourServices = [
   {
-    title: 'Create Package',
-    href: '#',
+    title: "Create Package",
+    href: "#",
   },
   {
-    title: 'Browse Registry',
-    href: '#',
+    title: "Browse Registry",
+    href: "#",
   },
   {
-    title: 'GitHub Publishing',
-    href: '#',
+    title: "GitHub Publishing",
+    href: "#",
   },
   {
-    title: 'Pricing',
-    href: '#',
+    title: "Pricing",
+    href: "#",
   },
   {
-    title: 'Early Access',
-    href: '#',
+    title: "Early Access",
+    href: "#",
   },
-]
+];
 
 const company = [
   {
-    title: 'About Us',
-    href: '/about',
+    title: "About Us",
+    href: "/about",
   },
   {
-    title: 'Blog',
-    href: '#',
+    title: "Blog",
+    href: "#",
   },
   {
-    title: 'Contact',
-    href: '/contact',
+    title: "Contact",
+    href: "/contact",
   },
   {
-    title: 'Partners',
-    href: '#',
+    title: "Partners",
+    href: "#",
   },
   {
-    title: 'Press',
-    href: '#',
+    title: "Press",
+    href: "#",
   },
-]
+];
 
 const support = [
   {
-    title: 'GitHub',
-    href: '#',
+    title: "GitHub",
+    href: "#",
   },
   {
-    title: 'Twitter/X',
-    href: '#',
+    title: "Twitter/X",
+    href: "#",
   },
   {
-    title: 'LinkedIn',
-    href: '#',
+    title: "LinkedIn",
+    href: "#",
   },
   {
-    title: 'Discord',
-    href: '#',
+    title: "Discord",
+    href: "#",
   },
   {
-    title: 'Product Hunt',
-    href: '#',
+    title: "Product Hunt",
+    href: "#",
   },
-]
+];
 
 export function Footer() {
   return (
@@ -182,5 +182,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
