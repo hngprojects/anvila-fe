@@ -1,65 +1,46 @@
 "use client";
-
 import React from "react";
-import { ArrowLeft, Mail } from "lucide-react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Mail, ChevronLeft } from "lucide-react";
 
-const ForgotPasswordForm = () => {
-  const router = useRouter();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    router.push("/auth/forgot-password/check-mail");
-  };
-
+export default function ForgotPasswordForm() {
   return (
-    <div className="w-full max-w-md bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+    <div className="w-full bg-white p-8 rounded-lg shadow-md">
       {/* Back Button */}
-      <Link 
-        href="/auth/login" 
-        className="flex items-center gap-2 text-sm font-medium text-gray-600 mb-8 hover:text-gray-900 transition-colors"
-      >
-        <ArrowLeft size={16} />
-        Back
-      </Link>
+      <button className="hidden md:flex items-center gap-1 text-sm text-[#667085] mb-6 hover:text-black transition-colors">
+        <ChevronLeft size={16} /> Back
+      </button>
 
       <div className="text-center mb-8">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Forgot Password?</h1>
-        <p className="text-gray-500 text-sm">Enter your email and we'll send you a reset link</p>
+        <h1 className="text-2xl md:text-3xl font-bold text-[#101828] md:mb-2 tracking-tight">Forgot Password?</h1>
+        <p className="text-xs md:text-sm text-[#667085]">Enter your details to receive a reset link</p>
       </div>
 
-      <form className="space-y-6" onSubmit={handleSubmit}>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+      <form className="space-y-3 md:space-y-5" onSubmit={(e) => e.preventDefault()}>
+        <div className="space-y-1.5">
+          <label className="text-xs font-semibold text-[#344054]">Email</label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-              <Mail size={18} />
-            </div>
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#667085]" />
             <input
               type="email"
-              required
               placeholder="Enter email address"
-              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#004D4D] focus:border-transparent transition-all placeholder:text-gray-300"
+              className="w-full pl-10 pr-4 py-2.5 border border-[#D0D5DD] rounded-lg text-sm outline-none focus:border-[#004D4D] focus:ring-1 focus:ring-[#004D4D] transition-all"
             />
           </div>
         </div>
 
         <button
           type="submit"
-          className="w-full bg-[#004D4D] text-white py-3 rounded-lg font-semibold hover:bg-[#003d3d] transition-all shadow-sm"
+          className="w-full py-2.5 bg-[#004D4D] hover:bg-[#003636] text-white rounded-lg text-sm transition-all shadow-sm"
         >
           Send Reset Link
         </button>
       </form>
 
       <div className="mt-10 text-center">
-        <p className="text-sm text-gray-500">
-          Need help? <a href="#" className="text-gray-900 font-medium hover:underline">Contact support</a>
+        <p className="text-xs text-[#667085]">
+          Need help? <button className="font-bold text-[#101828] hover:underline">Contact support</button>
         </p>
       </div>
     </div>
   );
-};
-
-export default ForgotPasswordForm;
+}
