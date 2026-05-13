@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const AUTH_ROUTES = ['/login', '/register']
+const AUTH_ROUTES = ['/login', '/register', '/forgot-password' ]
 const PUBLIC_ROUTES = [
   '/login',
   '/register',
+  '/forgot-password',
   '/verify-email',
   '/confirm-email',
   '/auth/callback/google',
@@ -11,6 +12,8 @@ const PUBLIC_ROUTES = [
   '/reset-password',
   '/explore',
   '/pricing',
+  '/about',
+  '/contact',
 ]
 
 export default async function proxy(request: NextRequest) {
