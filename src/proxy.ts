@@ -11,6 +11,8 @@ const PUBLIC_ROUTES = [
   '/reset-password',
   '/explore',
   '/pricing',
+  '/connect/github',
+  '/connect/google',
 ]
 
 export default async function proxy(request: NextRequest) {
