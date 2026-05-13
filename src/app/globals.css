@@ -1,7 +1,3 @@
-@import 'swiper/css' layer(base);
-@import 'swiper/css/navigation' layer(base);
-@import 'swiper/css/pagination' layer(base);
-@import 'swiper/css/scrollbar' layer(base);
 @import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
