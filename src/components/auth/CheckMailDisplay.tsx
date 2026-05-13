@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ChevronLeft } from "lucide-react";
+import Link from 'next/link';
 
 export default function CheckMailDisplay() {
   return (
@@ -15,12 +16,13 @@ export default function CheckMailDisplay() {
         <p className="text-xs md:text-sm text-[#667085]">We sent a password re-set link to jo******gmail.com</p>
       </div>
    
-        <button
+        <Link
           type="submit"
-          className="w-full py-2.5 bg-[#004D4D] hover:bg-[#003636] text-white rounded-lg text-sm transition-all shadow-sm"
+          className="block text-center w-full py-2.5 bg-[#004D4D] hover:bg-[#003636] text-white rounded-lg text-sm transition-all shadow-sm"
+          href="/auth/reset-password"
         >
           Resend Reset Link
-        </button>
+        </Link>
       
       <div className="mt-10 text-center">
         <p className="text-xs text-[#667085]">

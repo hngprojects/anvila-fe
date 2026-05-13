@@ -9,7 +9,7 @@ const PUBLIC_ROUTES = [
   '/auth/callback/google',
   '/auth/callback/github',
   '/auth/forgot-password',
-  '/reset-password',
+  '/auth/reset-password',
   '/explore',
   '/pricing',
 ]
