@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Mail, ChevronLeft } from "lucide-react";
+import Link from 'next/link';
 
 export default function ForgotPasswordForm() {
   return (
@@ -28,12 +29,13 @@ export default function ForgotPasswordForm() {
           </div>
         </div>
 
-        <button
+        <Link
           type="submit"
-          className="w-full py-2.5 bg-[#004D4D] hover:bg-[#003636] text-white rounded-lg text-sm transition-all shadow-sm"
+          className="block text-center w-full py-2.5 bg-[#004D4D] hover:bg-[#003636] text-white rounded-lg text-sm transition-all shadow-sm"
+          href="/auth/forgot-password/check-mail"
         >
           Send Reset Link
-        </button>
+        </Link>
       </form>
 
       <div className="mt-10 text-center">
